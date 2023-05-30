@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+    <title>Weather Forcast</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+   <form action="/" method="post"> 
+      <div class="outerContainer">
+        
+        <div class="innerContainer">
+          <div class="left">
+            <div class="title">
+                <h2 name="f"><%= seher %></h2>
+                <h3><%= desh %></h3>
+            </div>
+            <div class="date-time">
+                <div class="dmy">
+                  <div class="current-date"><%= kindOfDate %></div>
+                </div>
+                <div class="temperature">
+                  <p><%= temp %>&deg<span>C</span>
+                  </p>
+                  
+                </div>
+              </div>
+          </div>
+          <div class="right">
+            <div class="forecast">
+                <div class="forecast-icon">
+                  <ReactAnimatedWeather
+                    icon={props.icon}
+                    color={defaults.color}
+                    size={defaults.size}
+                    animate={defaults.animate}
+                  />
+                </div>
+                <div class="today-weather">
+                  
+                  <div class="search-box">
+                    <input type="text" class="search-bar" name="ct" placeholder="Search any city">
+                    
+                    <div class="img-box">
+                      <input id="img" type="image" src="images/search.png">
+                    </div>
+                  </div>
+                  <ul>
+                      <div>
+                        <li class="cityHead">
+                          <p><%= seher %> <%= desh %></p>
+                        </li>
+                        <li>
+                          Temperature
+                          <span class="temp">
+                            <%= temp %>°c (<%= wtType %>)
+                          </span>
+                        </li>
+                        <li>
+                          Humidity
+                          <span class="temp">
+                            <%= humid %>%
+                          </span>
+                        </li>
+                        <li>
+                          Visibility
+                          <span class="temp">
+                            <%= visible %> mi
+                          </span>
+                        </li>
+                        <li>
+                          Wind Speed
+                          <span class="temp">
+                            <%= spd %> Km/h
+                          </span>
+                        </li>
+                      </div>
+                  </ul>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    
+    </form>
+</body>
+</html>
