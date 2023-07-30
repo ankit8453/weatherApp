@@ -2,6 +2,8 @@
   /* background-color: #000000; */
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  
 }
   .outerContainer{
     background-image: url("../images/background1.jpg");
@@ -13,13 +15,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
   }
   .innerContainer{
-      border-radius: 1px;
-      height: 620px;
-      width: 750px;
+      border-radius: 3px;
+      height: 80%;
+      width: 60%;
       overflow: hidden;
       display: flex;
+      position: relative;
    }
   .left{
     background-image: url("../images/city.jpg");
@@ -48,7 +52,7 @@
   }
   
   .title h3 {
-    font-size: 25px;
+    font-size: 1.5625rem;
     font-weight: bold;
     color: #eee;
     margin-top: 0px;
@@ -81,13 +85,20 @@
   }
   .temperature p {
     font-family: "Raleway", sans-serif;
-    font-size: 80px;
+    font-size: 2.2rem;
     font-weight: 100;
-    margin: 0 40px;
+    top: 0;
+    color: #fff;
+    left: 0;
+    margin: 0;
+    /* margin-left: 100px; */
+    /* position: relative; */
+    /* margin: 0 40px; */
   }
   .temperature p span {
-    font-size: 50px;
+    font-size: 2.2rem;
     font-weight: 200;
+   
   }
   .forecast {
     height: 100%;
@@ -160,3 +171,178 @@
     justify-content: center;
   }
 /* Its Time For Media-querry */
+
+/* writing css for max width of 744px */
+@media (max-width: 744px) {
+  .outerContainer{
+    background-image: url("../images/background1.jpg");
+    height: 100vh;
+    ;
+
+}
+
+.innerContainer{
+    border-radius: 5px;
+    height: 70vh;
+    width: 60vw;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+ }
+ .left{
+  background-image: url("../images/city_sfeuul655.jpg");
+  background-position: center;
+  background-size: cover;
+  flex: 1.5;
+  background-color: black;
+} 
+ /* size */
+ 
+
+.title {
+  float: right;
+  font-family: "Oxygen", sans-serif;
+  padding: 0 40px 0 0;
+  gap: 0px;
+  
+}
+
+.title h2 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.title h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #eee;
+  margin-top: 0px;
+  text-align: right;
+}
+.date-time {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  width: 10%;
+
+  padding: 0 0 70px 0px;
+  font-family: "Oxygen", sans-serif;
+}
+.dmy {
+  margin-top: 50px;
+  float: left;
+  text-align: left;
+  position: absolute;
+}
+
+.current-date {
+  font-size: 0.89rem;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+.temperature {
+  width: 40%;
+  float: right;
+
+  left: 10px;
+}
+.temperature p {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 100;
+  top: 0;
+  color: #fff;
+  left: 0;
+  margin: 0;
+  /* margin-left: 100px; */
+  /* position: relative; */
+  /* margin: 0 40px; */
+}
+.temperature p span {
+  font-size: 1.52rem;
+  font-weight: 200;
+ 
+}
+.right{
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.475);
+}
+
+.forecast {
+  height: 100%;
+
+}
+.forecast-icon {
+  padding: 8px 0;
+  /* background: white; */
+}
+.today-weather ul{
+  margin: none;
+  padding-right: 10%;
+}
+.today-weather ul li {
+  margin: 0 auto;
+  line-height: 28px;
+  border-width: thin;
+  border-bottom: 1px solid #777;
+  color: #eee;
+  font-weight: 600;
+  text-align: left;
+  padding-left: 20px;
+  list-style-type: none;
+  font-size: 10px;
+}
+
+.today-weather ul li span {
+  float: right;
+  padding-right: 10px;
+}
+
+.today-weather ul li:nth-child(5) {
+  border-bottom: none;
+}
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0px;
+  position: relative;
+  margin-left: 16px;
+  
+}
+.search-box .img-box {
+  background: rgb(255, 255, 255, 0.2);
+  border-radius: 100%;
+  height: 24px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+}
+#img {
+  width: 30%;
+  cursor: pointer;
+}
+.search-box .search-bar {
+  border: none;
+  padding: 10px 11px;
+  background: transparent;
+  color: white;
+  border-bottom: 1px solid;
+  font-size: 0.45rem;
+}
+.search-box .search-bar::placeholder {
+  padding: 0;
+  color: white;
+}
+.cityHead {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  justify-content: center;
+}
+
+}
